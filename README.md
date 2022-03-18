@@ -16,3 +16,12 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+# Identifier for the styled grid
+# //SL - Server List
+# //SN - Server Name
+# //CI - Channel Info
+# //CL - Channel List
+# //CD - Channel Data
+# //UL - User List
+# //UI - User Info
