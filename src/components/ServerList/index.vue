@@ -3,9 +3,9 @@
     <ServerButton isHome />
     <div class="separator"></div>
     <ServerButton hasNotification :mentions="3" />
-    <ServerButton hasNotification />
+    <ServerButton />
     <ServerButton hasNotification :mentions="2" />
-    <ServerButton :mentions="3" />
+    <ServerButton hasNotification :mentions="3" />
     <ServerButton  v-for="servers in 18" :key="servers.id" />
   </div>
 </template>
