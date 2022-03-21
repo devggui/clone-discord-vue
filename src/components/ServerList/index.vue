@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import ServerButton from './ServerButton.vue'
+  import ServerButton from './ServerButton.vue'
 
-export default {
-  components: {
-    ServerButton
+  export default {
+    components: {
+      ServerButton
+    }
   }
-}
 </script>
 
 

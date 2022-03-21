@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="profile">
-      <div class="avatar"></div>
+      <div class="avatar">
+        <div class="status"></div>
+      </div>
       <div class="userdata">
         <strong>Guilherme</strong>
         <span>#1234</span>
@@ -16,17 +18,17 @@
 </template>
 
 <script>
-import Mic from 'vue-material-design-icons/Microphone'
-import HeadPhones from 'vue-material-design-icons/Headphones'
-import Settings from 'vue-material-design-icons/CogOutline';
+  import Mic from 'vue-material-design-icons/Microphone'
+  import HeadPhones from 'vue-material-design-icons/Headphones'
+  import Settings from 'vue-material-design-icons/CogOutline'
 
-export default {
-  components: {
-    Mic,
-    HeadPhones,
-    Settings
+  export default {
+    components: {
+      Mic,
+      HeadPhones,
+      Settings
+    }
   }
-}
 
 </script>
 
@@ -52,6 +54,25 @@ export default {
     height: 32px;
     border-radius: 50%;
     background-color: var(--gray);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .status {
+      background-color: var(--notification);
+      width: auto;
+      height: 16px;
+      padding: 0 4px;
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      border: solid 4px var(--quaternary);
+      border-radius: 12px;
+      text-align: right;
+      font-size: 13px;
+      font-weight: bold;
+      color: var(--white);
+    }
   }
 
   .userdata {

@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="serverbutton"
+  <div class="serverbutton"
     :class="{
       'serverbutton-isHome' : isHome,
       'serverbutton-hasNotification' : hasNotification
@@ -14,15 +13,14 @@
 </template>
 
 <script>
-
-export default {
-  props: {
-    selected: Boolean,
-    isHome: Boolean,
-    hasNotification: Boolean,
-    mentions: Number
-  },
-}
+  export default {
+    props: {
+      selected: Boolean,
+      isHome: Boolean,
+      hasNotification: Boolean,
+      mentions: Number
+    },
+  }
 </script>
 
 
