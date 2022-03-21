@@ -2,7 +2,7 @@
   <div class="container">
     <div class="title">Servidor Vue</div>
     <div class="icon">
-      <ExpandIcon size="28"/>
+      <ExpandIcon :size="28"/>
     </div>
   </div>
 </template>
