@@ -3,19 +3,22 @@
     <ServerList />
     <ServerName />
     <ChannelList />
+    <UserInfo />
   </div>
 </template>
 
 <script>
   import ServerList from './ServerList/index'
   import ServerName from './ServerName/index'
-  import ChannelList from './ChannelList/index.vue'
+  import ChannelList from './ChannelList/index'
+  import UserInfo from './UserInfo/index'
 
   export default {
     components: {
       ServerList,
       ServerName,
-      ChannelList
+      ChannelList,
+      UserInfo
     }
   }
 </script>
