@@ -4,7 +4,6 @@
     <ServerName />
     <ChannelList />
     <UserInfo />
-    <UserStatus />
   </div>
 </template>
 
@@ -14,16 +13,12 @@
   import ChannelList from './ChannelList/index'
   import UserInfo from './UserInfo/index'
 
-  //Teste
-  import UserStatus from './UserInfo/UserStatus.vue'
-
   export default {
     components: {
       ServerList,
       ServerName,
       ChannelList,
-      UserInfo,
-      UserStatus
+      UserInfo
     }
   }
 </script>

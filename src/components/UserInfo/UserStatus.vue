@@ -6,16 +6,18 @@
     <StatusItems notDisturb statusName="Não pertubar" description="Você não irá mais receber notificações na área de trabalho"/>
     <StatusItems invisible statusName="Invisível" description="Você não aparecerá como disponível, mas terá acesso completo ao Discord"/>
     <div class="separator"></div>
-    <StatusItems custom statusName="Definir status personalizado"/>
+    <StatusItems custom statusName="Definir status personalizado" />
   </div>
 </template>
 
 <script>
   import StatusItems from './StatusItems'
+  import Emote from 'vue-material-design-icons/EmoticonOutline'
 
   export default {
     components: {
-      StatusItems
+      StatusItems,
+      Emote
     }
   }
 
@@ -25,12 +27,15 @@
   .container {
     width: 220px;
     height: 282px;
-    max-height: 100vh;
+    min-width: 15%;
+    max-width: 30%;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: absolute;
     background: #18191c;
-    padding: 6px 8px 6px 8px;
+    right: 498px;
+    top: 330px;
     border-radius: 4px;
     overflow: hidden scroll;
 

@@ -12,17 +12,20 @@
     <ChannelButton channelName="amongus" />
     <ChannelButton channelName="naruto" />
     <ChannelButton channelName="dragonball" />
+    <UserStatus />
   </div>
 </template>
 
 <script>
   import AddCategoryIcon from 'vue-material-design-icons/Plus'
   import ChannelButton from './ChannelButton'
+  import UserStatus from '../UserInfo/UserStatus'
 
   export default {
     components: {
       AddCategoryIcon,
-      ChannelButton
+      ChannelButton,
+      UserStatus
     }
   }
 

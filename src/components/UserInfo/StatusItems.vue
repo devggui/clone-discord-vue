@@ -1,12 +1,11 @@
 <template>
   <div class="statusItem">
-    <div
+    <div class="icons"
       :class="{
         'icon-online': online,
         'icon-absent': absent,
         'icon-notDisturb': notDisturb,
-        'icon-invisible': invisible,
-        'icon-custom': custom
+        'icon-invisible': invisible
       }"
     ></div>
     <div class="statusdata">
@@ -28,7 +27,6 @@
       absent: Boolean,
       notDisturb: Boolean,
       invisible: Boolean,
-      custom: Boolean,
       statusName: String,
       description: String
     }
@@ -43,11 +41,13 @@
     width: 100%;
     align-items: center;
     padding: 4px 8px;
+    margin: 5px;
     min-height: 24px;
     -webkit-box-align: center;
 
     &:hover {
-      background-color: white;
+      background-color: var(--rocketseat);
+      border-radius: 4px;
     }
   }
 
@@ -63,7 +63,7 @@
   .icon-absent {
     display: flex;
     flex-direction: row;
-    background: black;
+    background: #FAA81A;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -72,7 +72,7 @@
   .icon-notDisturb {
     display: flex;
     flex-direction: row;
-    background: yellow;
+    background: #ED4245;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -81,7 +81,7 @@
   .icon-invisible {
     display: flex;
     flex-direction: row;
-    background: white;
+    background: #747F8D;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -90,7 +90,7 @@
   .icon-custom {
     display: flex;
     flex-direction: row;
-    background: blue;
+    background: #fff;
     width: 10px;
     height: 10px;
     border-radius: 50%;
