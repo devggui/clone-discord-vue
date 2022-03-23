@@ -1,13 +1,15 @@
 <template>
   <div class="statusItem">
-    <div class="icons"
-      :class="{
-        'icon-online': online,
-        'icon-absent': absent,
-        'icon-notDisturb': notDisturb,
-        'icon-invisible': invisible
-      }"
-    ></div>
+    <slot name="icon">
+      <div class="icons"
+        :class="{
+          'icon-online': online,
+          'icon-absent': absent,
+          'icon-notDisturb': notDisturb,
+          'icon-invisible': invisible
+        }"
+      ></div>
+    </slot>
     <div class="statusdata">
       <div class="status">
         {{ statusName }}
@@ -38,7 +40,7 @@
   .statusItem {
     display: grid;
     grid-template-columns: 24px 1fr;
-    width: 100%;
+    width: 95%;
     align-items: center;
     padding: 4px 8px;
     margin: 5px;
@@ -90,10 +92,12 @@
   .icon-custom {
     display: flex;
     flex-direction: row;
-    background: #fff;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+    color: #B9BBBE;
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+    font-size: 14px;
+    align-items: center;
   }
 
   .separator {

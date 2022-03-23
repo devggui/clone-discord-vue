@@ -2,8 +2,8 @@
   <div id="grid">
     <ServerList />
     <ServerName />
-    <ChannelList />
-    <UserInfo />
+    <ChannelList ref="channel-list" />
+    <UserInfo @click="toggleUserStatus" />
   </div>
 </template>
 
@@ -19,6 +19,20 @@
       ServerName,
       ChannelList,
       UserInfo
+    },
+
+    /*
+    <ChannelList ref="channel-list" />
+    <UserInfo @click="toggleUserStatus" />
+
+    Assim que a pagina index.vue do componente UserInfo emitir que foi clicado,
+    será chamado esse método toggleUserStatus -> Dentro dele, irá pegar o componente
+    por referência 'channel-list' e alterará o valor dele (que por padrão é false)
+    */
+    methods: {
+      toggleUserStatus() {
+        this.$refs['channel-list'].showUserStatus = !this.$refs['channel-list'].showUserStatus;
+      }
     }
   }
 </script>

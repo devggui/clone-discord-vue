@@ -12,7 +12,7 @@
     <ChannelButton channelName="amongus" />
     <ChannelButton channelName="naruto" />
     <ChannelButton channelName="dragonball" />
-    <UserStatus />
+    <UserStatus v-if="showUserStatus" />
   </div>
 </template>
 
@@ -26,6 +26,17 @@
       AddCategoryIcon,
       ChannelButton,
       UserStatus
+    },
+
+    /*
+    <UserStatus v-if="showUserStatus" />
+    Valor padrão do dado por referência: false
+    Componente recebe false como dado
+    */
+    data() {
+      return {
+        showUserStatus: false,
+      }
     }
   }
 

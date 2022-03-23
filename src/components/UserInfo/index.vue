@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="profile">
-      <div class="avatar">
-        <div class="status"></div>
+      <div class="avatar" @click="handleClick">
+        <div class="status" @selected="toggleIconStatus"></div>
       </div>
       <div class="userdata">
         <strong>Guilherme</strong>
@@ -21,12 +21,28 @@
   import Mic from 'vue-material-design-icons/Microphone'
   import HeadPhones from 'vue-material-design-icons/Headphones'
   import Settings from 'vue-material-design-icons/CogOutline'
+  import UserStatus from './UserStatus'
 
   export default {
     components: {
       Mic,
       HeadPhones,
-      Settings
+      Settings,
+      UserStatus
+    },
+
+    /*
+    <div class="avatar" @click="handleClick"> <- Toda vez que a div avatar for clicada,
+    será emitido um parâmetro 'click'.
+    */
+    methods: {
+      handleClick() {
+        this.$emit('click');
+      },
+
+      toggleIconStatus() {
+        //Faz algo...
+      }
     }
   }
 
@@ -59,7 +75,7 @@
     flex-direction: column;
 
     .status {
-      background-color: var(--notification);
+      /* background-color: var(--notification); */
       width: auto;
       height: 16px;
       padding: 0 4px;
